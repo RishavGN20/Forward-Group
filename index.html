@@ -17,17 +17,21 @@
             <img src="./images/forward_group_logo.webp">
         </div>
         <div class="list-items">
+            <ul class="sidebar">
+                <li onclick=hideShowbar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">What We Do</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
             <ul class="links">
-                <li class="dropdown"><a href="#">About Us</a>
-
-                </li>
-
+                <li><a href="#">About Us</a></li>
                 <li><a href="#">What We Do</a></li>
                 <li><a href="#">Case Studies</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
             <div class="icon">
-                <img src="./images/Icon feather-menu.png">
+                <img onclick=showSidebar() src="./images/Icon feather-menu.png">
                 <img src="./images/Icon awesome-user-circle.png">
             </div>
         </div>
@@ -286,7 +290,17 @@
         <p style="border:none">Copyright © 2023 All Rights Reserved</p>
     </footer>
 
+<script>
+    function showSidebar(){
+        const sidebar=document.querySelector('.sidebar');
+        sidebar.style.display='flex';
+    }
 
+    function hideShowbar(){
+        const sidebar=document.querySelector('.sidebar');
+        sidebar.style.display='none';
+    }
+</script>
 </body>
 
 </html>
